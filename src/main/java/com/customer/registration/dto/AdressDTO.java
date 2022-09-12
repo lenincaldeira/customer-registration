@@ -17,6 +17,20 @@ public class AdressDTO {
     private String state;
 
     @Override
+    public String toString() {
+        return "AdressDTO{" +
+                "id=" + id +
+                ", publicPlace='" + publicPlace + '\'' +
+                ", number=" + number +
+                ", complement='" + complement + '\'' +
+                ", district='" + district + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof AdressDTO adressDTO)) return false;

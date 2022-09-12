@@ -20,6 +20,20 @@ public class Customer {
     private MultipartFile photo;
 
     @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", birthDate=" + birthDate +
+                ", email='" + email + '\'' +
+                ", document='" + document + '\'' +
+                ", adresses=" + adresses +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", photo=" + photo +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Customer that)) return false;

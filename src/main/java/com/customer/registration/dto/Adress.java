@@ -17,10 +17,25 @@ public class Adress {
     private String state;
 
     @Override
+    public String toString() {
+        return "Adress{" +
+                "id=" + id +
+                ", publicPlace='" + publicPlace + '\'' +
+                ", number=" + number +
+                ", complement='" + complement + '\'' +
+                ", district='" + district + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Adress adressDTO)) return false;
-        return getId() == adressDTO.getId();
+        if (!(o instanceof Adress adress)) return false;
+        Adress that = (Adress) o;
+        return getId() == adress.getId();
     }
 
     @Override
