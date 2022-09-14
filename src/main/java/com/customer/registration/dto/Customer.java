@@ -1,8 +1,8 @@
 package com.customer.registration.dto;
 
 import lombok.Data;
-import org.springframework.web.multipart.MultipartFile;
 
+import javax.persistence.Lob;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,8 @@ public class Customer {
     private String document;
     private List<Adress> adresses;
     private String phoneNumber;
-    private MultipartFile photo;
+    @Lob
+    private byte[] photo;
 
     @Override
     public String toString() {

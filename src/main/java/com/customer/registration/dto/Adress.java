@@ -9,7 +9,7 @@ public class Adress {
 
     private long id;
     private String publicPlace;
-    private int number;
+    private int houseNumber;
     private String complement;
     private String district;
     private String postalCode;
@@ -21,7 +21,7 @@ public class Adress {
         return "Adress{" +
                 "id=" + id +
                 ", publicPlace='" + publicPlace + '\'' +
-                ", number=" + number +
+                ", number=" + houseNumber +
                 ", complement='" + complement + '\'' +
                 ", district='" + district + '\'' +
                 ", postalCode='" + postalCode + '\'' +

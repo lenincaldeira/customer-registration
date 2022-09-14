@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS customer (
+	id INTEGER NOT NULL PRIMARY KEY,
+	name VARCHAR(100) NULL,
+	birth_date DATE NULL,
+	email VARCHAR(50 NULL,
+	document VARCHAR(50) NULL,
+	adresses VARCHAR(255) NULL,
+	phone_number VARCHAR(50) NULL,
+	photo BLOB NULL
+	
+);
