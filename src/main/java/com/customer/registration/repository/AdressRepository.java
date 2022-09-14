@@ -1,4 +1,4 @@
-package repository;
+package com.customer.registration.repository;
 
 import com.customer.registration.dto.Adress;
 import org.springframework.data.jpa.repository.JpaRepository;

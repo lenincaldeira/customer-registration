@@ -2,19 +2,23 @@ package com.customer.registration.dto;
 
 import lombok.Data;
 
-import javax.persistence.Lob;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
 @Data
+@Entity
 public class Customer {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
     private Date birthDate;
     private String email;
     private String document;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_adress")
     private List<Adress> adresses;
     private String phoneNumber;
     @Lob

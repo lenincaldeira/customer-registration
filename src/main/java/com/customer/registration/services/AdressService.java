@@ -1,11 +1,10 @@
-package services;
+package com.customer.registration.services;
 
 import com.customer.registration.dto.Adress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.AdressRepository;
+import com.customer.registration.repository.AdressRepository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service

@@ -15,6 +15,8 @@ public class Adress {
     private String postalCode;
     private String city;
     private String state;
+    
+    private Customer customer;
 
     @Override
     public String toString() {
