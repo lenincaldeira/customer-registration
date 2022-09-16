@@ -2,11 +2,15 @@ package com.customer.registration.dto;
 
 import lombok.Data;
 
+import javax.persistence.*;
 import java.util.Objects;
 
 @Data
+@Entity
 public class Adress {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String publicPlace;
     private int houseNumber;
@@ -15,8 +19,6 @@ public class Adress {
     private String postalCode;
     private String city;
     private String state;
-    
-    private Customer customer;
 
     @Override
     public String toString() {

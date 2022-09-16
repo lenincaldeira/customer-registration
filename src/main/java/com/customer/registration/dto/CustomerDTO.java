@@ -3,12 +3,12 @@ package com.customer.registration.dto;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-
 @Data
-public class CustomerDTO {
+public class CustomerDTO implements Serializable {
 
     private long id;
     private String name;

@@ -17,9 +17,9 @@ public class Customer {
     private Date birthDate;
     private String email;
     private String document;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_adress")
-    private List<Adress> adresses;
+    //@OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="customer")
+    //@JoinColumn(name = "id_adress")
+    //private List<Adress> adresses;
     private String phoneNumber;
     @Lob
     private byte[] photo;
@@ -32,7 +32,7 @@ public class Customer {
                 ", birthDate=" + birthDate +
                 ", email='" + email + '\'' +
                 ", document='" + document + '\'' +
-                ", adresses=" + adresses +
+                //", adresses=" + adresses +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", photo=" + photo +
                 '}';

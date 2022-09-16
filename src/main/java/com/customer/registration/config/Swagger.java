@@ -45,7 +45,7 @@ public class Swagger {
                 .globalResponseMessage(RequestMethod.PUT, Arrays.asList(m204put, m403, m404, m422, m500))
                 .globalResponseMessage(RequestMethod.DELETE, Arrays.asList(m204del, m403, m404, m500))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.plataformalogistica.order"))
+                .apis(RequestHandlerSelectors.basePackage("com.customer.registration"))
                 .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(false)
@@ -54,8 +54,8 @@ public class Swagger {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(nameOwner + " Service Store",
-                "Este é o catálogo de serviços RESTFUL da " + nameOwner + ", para saber mais sobre acesse: ["
+                        "This is the RESTFUL service catalog from " + nameOwner + ", to learn more about go to: ["
                         + nameOwner + "](" + ulrOwner + ").",
-                "STORE-REST", "#", null, "Licensa da API", "#", Collections.emptyList());
+                "STORE-REST", "#", null, "API License", "#", Collections.emptyList());
     }
 }
