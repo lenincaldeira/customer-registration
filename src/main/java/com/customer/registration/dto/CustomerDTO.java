@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Objects;
 @Data
 public class CustomerDTO implements Serializable {
-
+//
     private long id;
     private String name;
     private Date birthDate;
