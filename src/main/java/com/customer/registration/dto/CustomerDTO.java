@@ -1,22 +1,29 @@
 package com.customer.registration.dto;
 
+import io.swagger.annotations.ApiParam;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import java.util.Objects;
 @Data
 public class CustomerDTO implements Serializable {
-//
-    private long id;
+    @ApiParam(required = true)
+    private Integer id;
+    @ApiParam(required = true)
     private String name;
+    @ApiParam(required = true)
     private Date birthDate;
+    @ApiParam(required = true)
     private String email;
+    @ApiParam(required = true)
     private String document;
-    private List<AdressDTO> adresses;
+    @ApiParam(required = true)
+    private AdressDTO adress;
+    @ApiParam(required = true)
     private String phoneNumber;
+    @ApiParam(required = false)
     private MultipartFile photo;
 
     @Override
@@ -27,7 +34,7 @@ public class CustomerDTO implements Serializable {
                 ", birthDate=" + birthDate +
                 ", email='" + email + '\'' +
                 ", document='" + document + '\'' +
-                ", adresses=" + adresses +
+                ", adresses=" + adress +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", photo=" + photo +
                 '}';

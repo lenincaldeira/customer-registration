@@ -19,7 +19,7 @@ public class CustomerController {
 // Save
     @ApiOperation(nickname = "customer-post", value = "insert user into the application")
     @PostMapping("/")
-    public ResponseEntity<Long> saveCustomer(@RequestParam(name = "customer", required = true) CustomerDTO customerDTO, HttpServletResponse response) throws Exception {
+    public ResponseEntity<Integer> saveCustomer(@RequestParam(name = "customer", required = true) CustomerDTO customerDTO, HttpServletResponse response) throws Exception {
         CustomerDTO customer = customerService.saveCustomer(customerDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(customer.getId());
     }

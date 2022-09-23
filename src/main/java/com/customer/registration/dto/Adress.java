@@ -7,11 +7,11 @@ import java.util.Objects;
 
 @Data
 @Entity
+@Embeddable
 public class Adress {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Integer id;
     private String publicPlace;
     private int houseNumber;
     private String complement;

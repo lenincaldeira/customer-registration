@@ -4,22 +4,19 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 import java.util.Objects;
 
 @Data
 @Entity
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Integer id;
     private String name;
     private Date birthDate;
     private String email;
     private String document;
-    //@OneToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL}, mappedBy="customer")
-    //@JoinColumn(name = "id_adress")
-    //private List<Adress> adresses;
+    @Embedded
+    private Adress adress;
     private String phoneNumber;
     @Lob
     private byte[] photo;
